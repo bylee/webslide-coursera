@@ -1,5 +1,25 @@
 {
 	"id" : "test",
 	"pages" : [
+		"cover",
+		"agenda",
+		"mooc1",
+		"mooc2",
+		"mooc3",
+		"mooc4",
+		"coursera",
+		"coursera-landingpage",
+		"coursera-dashboard",
+		"coursera-course",
+		"coursera-partner",
+		"coursera-profile",
+		"coursera-record",
+		"coursera-career",
+		"coursera-explore",
+		"exp1",
+		"exp2",
+		"exp3",
+		"exp4",
+		"exp5"
 	]
 }

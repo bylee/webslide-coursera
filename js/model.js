@@ -20,7 +20,7 @@
 
 	SlidePage = Model.extend( {
 		url: function() {
-			return '/webslide-test/' + this.get( 'slide' ).get( 'id' ) + '/' + this.get( 'id' ) + '.html';
+			return '/webslide-coursera/' + this.get( 'slide' ).get( 'id' ) + '/' + this.get( 'id' ) + '.html';
 		},
 		fetch: function() {
 			var page = this;
@@ -47,7 +47,7 @@
 				//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 			
 				// Syntax highlight for <code> elements
-				{ src: '/webslide-test/js/highlight.js', async: true, callback: function() { hljs.initHighlighting(); } },
+				{ src: '/webslide-coursera/js/highlight.js', async: true, callback: function() { hljs.initHighlighting(); } },
 			
 				// Zoom in and out with Alt+click
 				//{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
@@ -109,7 +109,7 @@
 			this.on( 'load', this.onLoad, this );
 		},
 		url: function() {
-			return '/webslide-test/' + this.get( 'id' ) + '.json';
+			return '/webslide-coursera/' + this.get( 'id' ) + '.json';
 		},
 		parse: function( data ) {
 			var slide = this;
@@ -152,7 +152,7 @@
 		save: function( page, text ) {
 			var selected = this.selected;
 			if ( selected ) {
-				$.ajax( '/webslide-test/' + this.get( 'id' ) + '/' + selected + '.html', { type: 'POST', data: text, success: function() {
+				$.ajax( '/webslide-coursera/' + this.get( 'id' ) + '/' + selected + '.html', { type: 'POST', data: text, success: function() {
 					page.set( 'html', text );
 					page.trigger( 'contentChanged' );
 				} } );
